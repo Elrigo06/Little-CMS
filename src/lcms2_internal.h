@@ -592,6 +592,13 @@ cmsBool   _cmsAdaptationMatrix(cmsMAT3* r, const cmsMAT3* ConeMatrix, const cmsC
 
 cmsBool   _cmsBuildRGB2XYZtransferMatrix(cmsMAT3* r, const cmsCIExyY* WhitePoint, const cmsCIExyYTRIPLE* Primaries);
 
+// Conversions to/from 16-bit floating point ----------------------------------------------------------------------------
+
+cmsBool   single2halfp(void *target, void *source, cmsUInt32Number numel);
+cmsBool   double2halfp(void *target, void *source, cmsUInt32Number numel);
+cmsBool   halfp2single(void *target, void *source, cmsUInt32Number numel);
+cmsBool   halfp2double(void *target, void *source, cmsUInt32Number numel);
+
 
 #define _lcms_internal_H
 #endif
